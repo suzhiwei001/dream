@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.szw</groupId>
-    <artifactId>springbootdemosu</artifactId>
+    <artifactId>dreamDev</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springbootdemosu</name>
+    <name>dreamDev</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -76,7 +76,6 @@
                         <id>Generate MyBatis Files</id>
                         <goals>
                             <goal>generate</goal>
-
                         </goals>
                         <phase>generate</phase>
                         <configuration>

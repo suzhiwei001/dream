@@ -1,4 +1,4 @@
-package com.szw.springbootdemosu.config;
+package com.szw.dream.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;

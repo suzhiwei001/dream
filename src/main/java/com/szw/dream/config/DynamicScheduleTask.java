@@ -1,18 +1,12 @@
-package com.szw.springbootdemosu.config;
+package com.szw.dream.config;
 
-import com.szw.springbootdemosu.mapper.CronMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
-import org.springframework.scheduling.support.CronTrigger;
 import org.springframework.stereotype.Component;
-import org.springframework.util.StringUtils;
-
-import java.time.LocalDateTime;
 
 /**
  * https://www.cnblogs.com/mmzs/p/10161936.html -》二
@@ -26,14 +20,12 @@ import java.time.LocalDateTime;
 @EnableScheduling// 2.开启定时任务
 public class DynamicScheduleTask implements SchedulingConfigurer {
     private static final Logger logger = LoggerFactory.getLogger(DynamicScheduleTask.class);
-    @Autowired
-    CronMapper cronMapper;
     /**
      * 执行定时任务
      */
     @Override
     public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
-        taskRegistrar.addTriggerTask(
+/*        taskRegistrar.addTriggerTask(
                 ()->logger.info("执行动态定时任务:" + LocalDateTime.now().toLocalTime()),
                 triggerContext ->{
                     String cron = cronMapper.getCron();
@@ -45,6 +37,6 @@ public class DynamicScheduleTask implements SchedulingConfigurer {
                     }
                     return new CronTrigger(cron).nextExecutionTime(triggerContext);
                 }
-        );
+        );*/
     }
 }

@@ -1,4 +1,4 @@
-package com.szw.springbootdemosu.generator_code.util;
+package com.szw.dream.generator_code.util;
 
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;
