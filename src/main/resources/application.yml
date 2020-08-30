@@ -1,7 +1,5 @@
-#��Ŀ�˿ں�����
 server:
   port: 9999
-#������ͨpojo�������ļ���ӳ��
 person:
   name: hello
   age: 18
@@ -14,7 +12,7 @@ spring:
     url: jdbc:mysql://localhost:3306/dream_user?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
 mybatis:
-  mapper-locations: classpath:mapping/*Mapping.xml
+  mapper-locations: classpath:mapper/*Mapping.xml
   type-aliases-package: com.szw.dream.po
 logging:
   level:
