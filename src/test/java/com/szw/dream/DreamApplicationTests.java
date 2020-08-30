@@ -1,6 +1,6 @@
 package com.szw.dream;
 
-import com.szw.dream.config.Person;
+import com.szw.dream.config.study.Person;
 import com.szw.dream.po.UserBase;
 import com.szw.dream.service.UserBaseService;
 import org.junit.Test;
