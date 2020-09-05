@@ -1,4 +1,4 @@
-package com.szw.dream.config.study.one;
+package com.szw.dream.config.study.schedule;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
