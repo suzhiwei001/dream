@@ -1,4 +1,4 @@
-package com.szw.dream.config.study;
+package com.szw.dream.config.study.one;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
