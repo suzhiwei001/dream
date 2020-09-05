@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 @EnableScheduling // 2.开启定时任务
 public class SaticScheduleTask {
     private static final Logger logger = LoggerFactory.getLogger(SaticScheduleTask.class);
-    @Scheduled(fixedRate=5000)//直接指定时间间隔，例如：5秒
+    //@Scheduled(fixedRate=5000)//直接指定时间间隔，例如：5秒
     private void configureTasks(){
         logger.info("执行静态定时任务时间: " + LocalDateTime.now());
     }
