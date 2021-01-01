@@ -24,6 +24,9 @@ public class DreamApplicationTests {
     @Test
     public void userBaseTest() {
         UserBase userBase1 = userBaseService.queryUser(1L);
+        //程序运行时获取可用的处理器数量
+        int i = Runtime.getRuntime().availableProcessors();
+        System.out.println(i);
         System.out.println(userBase1);
     }
 }
