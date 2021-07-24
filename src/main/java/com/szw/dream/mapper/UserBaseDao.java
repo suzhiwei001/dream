@@ -1,17 +1,15 @@
 package com.szw.dream.mapper;
 
 import com.szw.dream.po.UserBase;
-import com.szw.dream.po.UserBaseExample;
-import java.util.List;
 
-public interface UserBaseMapper {
+public interface UserBaseDao {
+    int deleteByPrimaryKey(Integer uid);
+
     int insert(UserBase record);
 
     int insertSelective(UserBase record);
 
-    List<UserBase> selectByExample(UserBaseExample example);
-
-    UserBase selectByPrimaryKey(Long uid);
+    UserBase selectByPrimaryKey(Integer uid);
 
     int updateByPrimaryKeySelective(UserBase record);
 
