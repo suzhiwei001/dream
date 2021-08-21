@@ -14,10 +14,10 @@ public class DreamInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String ipAddress = IpAddressService.getIpAddress(request);
         log.info("请求者地址，ipAddress={}",ipAddress);
-        if("192.168.0.105".equals(ipAddress)){
+        if("123.123.130.106".equals(ipAddress)){
             return true;
         }else{
-            return true;
+            return false;
         }
     }
 

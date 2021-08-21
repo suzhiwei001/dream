@@ -1,9 +1,11 @@
 package com.szw.dream.config.security;
 
+import lombok.extern.slf4j.Slf4j;
+
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-
+@Slf4j
 public class IpAddressService {
     /**
      * 获取当前网络ip
@@ -37,6 +39,23 @@ public class IpAddressService {
                 ipAddress = ipAddress.substring(0,ipAddress.indexOf(","));
             }
         }
+        iPAll(request);
         return ipAddress;
+    }
+
+    public static void iPAll(HttpServletRequest request) {
+        log.info("x-forwarded-for={}",request.getHeader("x-forwarded-for"));
+        log.info("Proxy-Client-IP={}",request.getHeader("Proxy-Client-IP"));
+        log.info("WL-Proxy-Client-IP={}",request.getHeader("WL-Proxy-Client-IP"));
+        log.info("WL-Proxy-Client-IP={}",request.getHeader("WL-Proxy-Client-IP"));
+
+        try {
+            byte[] address = InetAddress.getLocalHost().getAddress();
+            log.info("address={}",address);
+            String hostAddress = InetAddress.getLocalHost().getHostAddress();
+            log.info("hostAddress={}",hostAddress);
+        } catch (UnknownHostException e) {
+            log.error("");
+        }
     }
 }
