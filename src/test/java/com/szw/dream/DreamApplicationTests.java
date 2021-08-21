@@ -1,7 +1,6 @@
 package com.szw.dream;
 
-import com.szw.dream.config.study.schedule.Person;
-import com.szw.dream.service.UserBaseService;
+import com.szw.dream.study.Person;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

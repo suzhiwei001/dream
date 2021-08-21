@@ -1,4 +1,4 @@
-package com.szw.dream.config.study.sync;
+package com.szw.dream.study;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
