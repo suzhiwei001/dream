@@ -165,4 +165,6 @@ public class UserBase implements Serializable {
     public void setPushToken(String pushToken) {
         this.pushToken = pushToken;
     }
+
+
 }
