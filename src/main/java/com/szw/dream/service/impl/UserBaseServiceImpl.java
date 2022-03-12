@@ -4,6 +4,7 @@ import com.szw.dream.mapper.UserBaseMapper;
 import com.szw.dream.po.UserBase;
 import com.szw.dream.service.UserBaseService;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -30,6 +31,9 @@ public class UserBaseServiceImpl implements UserBaseService {
         userOne.add("生日");
         userList.add(userOne);
         List<UserBase> userBases = userBaseMapper.selectUserAll();
+        if(CollectionUtils.isEmpty(userBases)){
+            return userList;
+        }
         for (UserBase user : userBases) {
             List<String> users = new ArrayList<>();
             users.add(user.getUid().toString());
