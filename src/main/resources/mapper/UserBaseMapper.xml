@@ -262,4 +262,9 @@
       push_token = #{pushToken,jdbcType=VARCHAR}
     where uid = #{uid,jdbcType=BIGINT}
   </update>
+  <select id="selectUserAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user_base
+  </select>
 </mapper>

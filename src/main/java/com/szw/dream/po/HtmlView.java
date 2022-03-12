@@ -2,6 +2,8 @@ package com.szw.dream.po;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Map;
+
 import lombok.Data;
 
 /**
@@ -20,7 +22,7 @@ public class HtmlView implements Serializable {
     /**
      * HTML页面
      */
-    private Object htmlView;
+    private Map<String,Object> htmlView;
 
     /**
      * 创建时间
